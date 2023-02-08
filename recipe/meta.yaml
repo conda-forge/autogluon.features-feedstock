@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.11
+    - python >=3.8,<3.10
     - pip
   # see https://github.com/autogluon/autogluon/blob/master/core/src/autogluon/core/_setup_utils.py
   run:
-    - python >=3.8,<3.11
+    - python >=3.8,<3.10
     - numpy >=1.21,<1.27
     - pandas >=1.4.1,<1.6
     - scikit-learn >=1.0,<1.3
