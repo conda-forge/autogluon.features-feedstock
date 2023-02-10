@@ -11,6 +11,12 @@ Summary: AutoML for Image, Text, and Tabular Data
 
 Development: https://github.com/autogluon/autogluon/
 
+AutoGluon automates machine learning tasks enabling you to easily achieve strong
+predictive performance in your applications. With just a few lines of code, you
+can train and deploy high-accuracy machine learning and deep learning models on
+image, text, time series, and tabular data.
+
+
 Current build status
 ====================
 
