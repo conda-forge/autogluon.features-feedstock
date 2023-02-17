@@ -6,16 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  # url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  # sha256: 96075e9bfce79420fe78a5566a1ba82f9a80598e955f4a4fc490f5561ede70bd
-  # Use the latest commit temporarily
-  url: https://github.com/autogluon/autogluon/archive/ab43ffb2c8ed6ad45b46d29958df7ae039a1c9ac.tar.gz
-  sha256: f66ec997340b7451bf879270acd18d9c3840e2b0315626730cc3e93c72288238
+  url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 455831de3c9de8fbe11b100054b8f150661d0651212fcfa4ec2e42417fdac355
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./features -vv
-  number: 0
+  number: 1
   script_env:
    - RELEASE=1
 
