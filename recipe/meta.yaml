@@ -1,5 +1,5 @@
 {% set name = "autogluon.features" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 455831de3c9de8fbe11b100054b8f150661d0651212fcfa4ec2e42417fdac355
+  sha256: 4c792085a9382eb481ecec25389692f28e961c1e83ed08bdfea0d23ec8c89069
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./features -vv
-  number: 1
+  number: 0
   script_env:
-   - RELEASE=1
+    - RELEASE=1
 
 requirements:
   host:
