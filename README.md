@@ -1,11 +1,11 @@
-About autogluon.features
-========================
+About autogluon.features-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/autogluon.features-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/autogluon.features/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/autogluon.features-feedstock/blob/main/LICENSE.txt)
 
 Summary: AutoML for Image, Text, and Tabular Data
 
