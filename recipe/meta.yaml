@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./features -vv
-  number: 0
+  number: 1
   script_env:
     - RELEASE=1
 
@@ -20,7 +20,8 @@ requirements:
   host:
     - python >=3.8,<3.11
     - pip
-  # see https://github.com/autogluon/autogluon/blob/master/core/src/autogluon/core/_setup_utils.py
+  # see deps in https://github.com/autogluon/autogluon/blob/master/features/setup.py
+  # version bounds defined in https://github.com/autogluon/autogluon/blob/master/core/src/autogluon/core/_setup_utils.py
   run:
     - python >=3.8,<3.11
     - numpy >=1.21,<1.27
