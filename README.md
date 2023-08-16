@@ -153,4 +153,5 @@ Feedstock Maintainers
 
 * [@Innixma](https://github.com/Innixma/)
 * [@giswqs](https://github.com/giswqs/)
+* [@yinweisu](https://github.com/yinweisu/)
 
