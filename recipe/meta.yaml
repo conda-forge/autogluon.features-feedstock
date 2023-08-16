@@ -33,8 +33,7 @@ test:
   imports:
     - autogluon.features
   commands:
-    # Temporarily disable for 0.8.2 patching
-    # - python -c "from autogluon.features import __version__ as v; assert v == '{{ version }}', f'{v} != {{ version }}'"
+    - python -c "from autogluon.features import __version__ as v; assert v == '{{ version }}', f'{v} != {{ version }}'"
   requires:
     - pip
 
