@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/autogluon/autogluon/archive/5cc799b1ac88a967e1a7fdac9e8594ca7475c2c5.tar.gz
-  sha256: 4bc97b77dd44ec7dbdb8a9767388eff055cd5d933226ef87d30b9f99fc8bf2b2
+  url: https://github.com/autogluon/autogluon/archive/7dead13ee1efdffe437e0dc0b83ba08eb9dcf6c7.tar.gz
+  sha256: 5cf3c86a6cac944fd070c17288753788a450eb2732b237d57686546d472f0ba5
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./features -vv
-  number: 2
+  number: 3
   script_env:
     - RELEASE=1
 
@@ -25,8 +25,8 @@ requirements:
   run:
     - python >=3.8,<3.11
     - numpy >=1.21,<1.27
-    - pandas >=1.4.1,<1.6
-    - scikit-learn >=1.0,<1.3
+    - pandas >=1.4.1,<2.2
+    - scikit-learn >=1.3,<1.5
     - autogluon.common =={{ version }}
 
 test:
