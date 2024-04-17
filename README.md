@@ -155,5 +155,4 @@ Feedstock Maintainers
 * [@giswqs](https://github.com/giswqs/)
 * [@suzhoum](https://github.com/suzhoum/)
 * [@tonyhoo](https://github.com/tonyhoo/)
-* [@yinweisu](https://github.com/yinweisu/)
 
