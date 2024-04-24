@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install ./features -vv
-  number: 2
+  number: 3
   script_env:
     - RELEASE=1
 
@@ -26,7 +26,7 @@ requirements:
     - python >=3.8,<3.12
     - numpy >=1.21,<1.29
     - pandas >=2.0.0,<2.3.0
-    - scikit-learn >=1.0,<1.4.1
+    - scikit-learn >=1.0,<1.4.3
     - autogluon.common =={{ version }}
 
 test:
