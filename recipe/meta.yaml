@@ -1,13 +1,13 @@
 {% set name = "autogluon.features" %}
-{% set version = "1.2.0" %}
+{% set version = "0.8.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://autogluon.s3.us-west-2.amazonaws.com/tarballs/1.2.0_patch/tarball.tar.gz 
-  sha256: ac72aa0430b711b5eb540b01064a505d42333738bc8b1cd44649249183a647d1 
+  url: https://autogluon.s3.us-west-2.amazonaws.com/tarballs/0.8.3_patch/tarball.tar.gz 
+  sha256: 1ccc6834b753ad0dc1d96338d8d56ada5b86356a2d34a9e2a29c3e685af277e1 
 
 build:
   noarch: python
@@ -18,16 +18,17 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<3.13
+    - python >=3.8,<3.11
     - pip
   # see deps in https://github.com/autogluon/autogluon/blob/master/features/setup.py
   # version bounds defined in https://github.com/autogluon/autogluon/blob/master/core/src/autogluon/core/_setup_utils.py
   run:
-    - python >=3.9,<3.13
-    - numpy >=1.25.0,<2.1.4
-    - pandas >=2.0.0,<2.3.0
-    - scikit-learn >=1.4.0,<1.6
+    - python >=3.8,<3.11
+    - numpy >=1.21,<1.27
+    - pandas >=1.4.1,<2.2
+    - scikit-learn >=1.1,<1.5
     - autogluon.common =={{ version }}
+    - packaging
 
 test:
   imports:
