@@ -1,5 +1,5 @@
 {% set name = "autogluon.features" %}
-{% set version = "1.3.1" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: fd388cb91e5a9467252be061b1bb90c9735d7f543d1d8335ff75f4b362ce4d86
+  sha256: 42e4838bb95328cedb54a9d094072068d8ce1e610a1154f91190b3670011561b
 
 build:
   noarch: python
@@ -23,11 +23,31 @@ requirements:
   # see deps in https://github.com/autogluon/autogluon/blob/master/features/setup.py
   # version bounds defined in https://github.com/autogluon/autogluon/blob/master/core/src/autogluon/core/_setup_utils.py
   run:
+    - accelerate >=0.34.0,<2.0
+    - autogluon.core ==1.4.0b20250729
+    - autogluon.features ==1.4.0b20250729
+    - autogluon.tabular ==1.4.0b20250729
+    - coreforecast >=0.0.12,<0.0.17
+    - fugue >=0.9.0
+    - gluonts >=0.15.0,<0.17
+    - joblib >=1.2,<1.7
+    - lightning >=2.2,<2.8
+    - mlforecast >=0.14.0,<0.15.0
+    - networkx >=3.0,<4
+    - orjson >=3.9,<4.dev0
+    - pytorch >=2.2,<2.8
+    - pytorch-lightning
+    - scipy >=1.5.4,<1.17
+    - statsforecast >=1.7.0,<2.0.2
+    - tensorboard >=2.9,<3
+    - tqdm >=4.38,<5
+    - transformers >=4.38.0,<4.50
+    - utilsforecast >=0.2.3,<0.2.12
     - python >={{ python_min }},<3.13
-    - numpy >=1.25.0,<2.3.0
-    - pandas >=2.0.0,<2.3.0
+    - numpy >=1.25.0,<2.4.0
+    - pandas >=2.0.0,<2.4.0
     - scikit-learn >=1.4.0,<1.7.0
-    - autogluon.common =={{ version }}
+    - autogluon.common ==1.4.0b20250729
 
 test:
   imports:
