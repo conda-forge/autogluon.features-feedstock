@@ -1,5 +1,5 @@
 {% set name = "autogluon.features" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/autogluon/autogluon/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 42e4838bb95328cedb54a9d094072068d8ce1e610a1154f91190b3670011561b
+  sha256: 133ceb769cebce26255f379c129b58acacab2424a692b7ee81f02d78bbb228cb
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
   # see deps in https://github.com/autogluon/autogluon/blob/master/features/setup.py
   # version bounds defined in https://github.com/autogluon/autogluon/blob/master/core/src/autogluon/core/_setup_utils.py
   run:
-    - python >={{ python_min }},<3.13
+    - python >={{ python_min }},<3.14
     - numpy >=1.25.0,<2.4.0
     - pandas >=2.0.0,<2.4.0
     - scikit-learn >=1.4.0,<1.8.0
